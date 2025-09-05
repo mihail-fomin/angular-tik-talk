@@ -1,5 +1,7 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
-
-<app-profile-card></app-profile-card>
+<div class="grid gap-2">
+    @for (profile of profiles; track profile.id) {
+        <app-profile-card
+            [profile]="profile"
+        ></app-profile-card>
+    }
+</div>

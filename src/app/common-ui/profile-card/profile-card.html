@@ -1,33 +1,32 @@
-<div class="grid grid-cols-4 gap-4 border-1 border-light-color px-6 py-8">
-    <div class="grid grid-cols-[70px_1fr] gap-5">
-        <img src="/assets/images/image.png" alt="avatar" class="w-18 h-18 rounded-full">
+@if (profile) {
+    <div class="grid grid-cols-4 gap-4 border-1 border-light-color px-6 py-8">
+        <div class="grid grid-cols-[70px_1fr] gap-5">
+            <img
+                [src]="profile.avatarUrl"
+                [alt]="profile.username"
+                class="w-18 h-18 rounded-full"
+            >
 
-        <div class="flex flex-col gap-1">
-            <h6>Ryan Gosling</h6>
-            <span>ryan.gosling</span>
+            <div class="flex flex-col gap-1">
+                <h6>{{ profile.firstName }} {{ profile.lastName }}</h6>
+                <span>{{ profile.username }}</span>
+            </div>
         </div>
+
+        <div>
+            {{ profile.description }}
+        </div>
+
+        <div>
+            @for (skill of profile.stack; track skill) {
+                <div class="inline py-1 px-2 mr-1 font-bold border-1 border-light-color rounded-md bg-light-color">
+                    {{ skill }}
+                </div>
+            }
+        </div>
+
+        <button class="border-0 bg-[var(--primary-color)] text-[var(--dark-color)] font-bold py-2 px-4">
+            Subscribe
+        </button>
     </div>
-
-    <div>
-        Skills list to be shown here
-    </div>
-
-    <div>
-        <div class="inline py-1 px-2 mr-1 font-bold border-1 border-light-color rounded-md bg-light-color">
-            Angular
-        </div>
-        <div class="inline py-1 px-2 mr-1 font-bold border-1 border-light-color rounded-md bg-light-color">
-            React
-        </div>
-        <div class="inline py-1 px-2 mr-1 font-bold border-1 border-light-color rounded-md bg-light-color">
-            Vue
-        </div>
-        <div class="inline py-1 px-2 mr-1 font-bold border-1 border-light-color rounded-md bg-light-color">
-            Node.js
-        </div>
-    </div>
-
-    <button class="border-0 bg-[var(--primary-color)] text-[var(--dark-color)] font-bold py-2 px-4">
-        Subscribe
-    </button>
-</div>
+}
