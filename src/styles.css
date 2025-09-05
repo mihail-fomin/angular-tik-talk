@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+:root {
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --primary-color: #AE7AFF;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: 'JetBrainsMono', monospace;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-family: 'JetBrainsMonoBold', monospace;
+  line-height: 1.5;
+  font-weight: 800;
+}
