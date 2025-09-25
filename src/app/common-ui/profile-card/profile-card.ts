@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Profile } from '../../data/interfaces/profile.iterface';
+import { ImageUrlPipe } from '../../helpers/pipes/image-url-pipe';
 
 @Component({
   selector: 'app-profile-card',
-  imports: [],
+  imports: [ImageUrlPipe],
   templateUrl: './profile-card.html',
   styleUrl: './profile-card.css'
 })

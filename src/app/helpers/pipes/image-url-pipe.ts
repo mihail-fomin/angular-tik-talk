@@ -6,6 +6,7 @@ import { ProfileService } from '../../data/services/profile.service';
 })
 export class ImageUrlPipe implements PipeTransform {
     profileService = inject(ProfileService);
+
     transform(value: string | null): string | null {
         if (!value) {
             return null;
