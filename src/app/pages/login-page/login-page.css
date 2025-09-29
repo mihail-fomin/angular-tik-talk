@@ -1,0 +1,7 @@
+.input-field {
+  @apply block border-[1px] border-white rounded-md mt-2 py-3 px-5 bg-[var(--dark-color)] font-normal text-white;
+}
+
+.input-label {
+  @apply font-bold text-xs;
+} 

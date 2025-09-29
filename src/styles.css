@@ -18,9 +18,19 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
 h6 {
   font-size: 1.25rem;
   font-family: 'JetBrainsMonoBold', monospace;
   line-height: 1.5;
   font-weight: 800;
+}
+
+button {
+  @apply w-full bg-[var(--primary-color)] text-[var(--dark-color)] font-bold py-2 px-4;
 }
